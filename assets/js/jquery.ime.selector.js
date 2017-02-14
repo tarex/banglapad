@@ -33,7 +33,7 @@
 				.append( toggleMenuItem() )
 				.append( languageListTitle() );
 			this.prepareLanguageList();
-			
+
 			if ( $.i18n ) {
 				this.$menu.i18n();
 			}
@@ -72,7 +72,7 @@
 		focus: function () {
 			// Hide all other IME settings
 			$( 'div.imeselector' ).hide();
-			this.$imeSetting.show();
+			//this.$imeSetting.show();
 			this.resetTimer();
 		},
 
@@ -365,18 +365,18 @@
 
 			$imeList.empty();
 
-			$.each( language.inputmethods, function ( index, inputmethod ) {
-				var name = $.ime.sources[inputmethod].name,
-					$imeItem = $( '<a>' ).text( name ),
-					$inputMethod = $( '<li data-ime-inputmethod=' + inputmethod + '>' );
-
-				$inputMethod.append( '<span class="ime-im-check">' ).append( $imeItem );
-				$inputMethod.addClass( 'ime-im' );
-				$imeList.append( $inputMethod );
-			} );
+			// $.each( language.inputmethods, function ( index, inputmethod ) {
+			// 	var name = $.ime.sources[inputmethod].name,
+			// 		$imeItem = $( '<a>' ).text( name ),
+			// 		$inputMethod = $( '<li data-ime-inputmethod=' + inputmethod + '>' );
+      //
+			// 	$inputMethod.append( '<span class="ime-im-check">' ).append( $imeItem );
+			// 	$inputMethod.addClass( 'ime-im' );
+			// 	$imeList.append( $inputMethod );
+			// } );
 		},
 
-		
+
 	};
 
 	IMESelector.defaults = {

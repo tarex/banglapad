@@ -172,7 +172,7 @@
 			//save the layout value (name) in browser cookie (setCookie function is located in functions.js)
 				if (this.language=="bn") {
 					//set Cookie
-					setCookie("layout",inputmethodId,365);
+					// setCookie("layout",inputmethodId,365);
 				}
 		},
 
@@ -199,30 +199,27 @@
 				if ( callback ) {
 					callback.call( ime );
 				}
-
-				
-				
 			}
 
-			dependency = $.ime.sources[name].depends;
-			if ( dependency ) {
-				this.load( dependency ) ;
-			}
+			// dependency = $.ime.sources[name].depends;
+			// if ( dependency ) {
+			// 	this.load( dependency ) ;
+			// }
 
-			$.ajax( {
-				url: ime.options.imePath + $.ime.sources[name].source,
-				dataType: 'script'
-			} ).done( function () {
-				//debug( name + ' loaded' );
-
-				if ( callback ) {
-					callback.call( ime );
-				}
-				//save the layout value (name) in browser cookie (setCookie function is located in functions.js)
-				//setCookie("layout",name,365);
-			} ).fail( function ( jqxhr, settings, exception ) {
-				//debug( 'Error in loading inputmethod ' + name + ' Exception: ' + exception );
-			} );
+			// $.ajax( {
+			// 	url: ime.options.imePath + $.ime.sources[name].source,
+			// 	dataType: 'script'
+			// } ).done( function () {
+			// 	//debug( name + ' loaded' );
+      //
+			// 	if ( callback ) {
+			// 		callback.call( ime );
+			// 	}
+			// 	//save the layout value (name) in browser cookie (setCookie function is located in functions.js)
+			// 	//setCookie("layout",name,365);
+			// } ).fail( function ( jqxhr, settings, exception ) {
+			// 	//debug( 'Error in loading inputmethod ' + name + ' Exception: ' + exception );
+			// } );
 		},
 
 		// Returns an array [start, end] of the beginning

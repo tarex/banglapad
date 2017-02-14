@@ -1,121 +1,101 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>বাংলা লেখার জন্য </title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="tarex">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>বাংলা লেখার জন্য</title>
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  #banglapad {
+    margin-top: 50px;
+    width: 100%;
+    height: calc(100% - 50px);
+    position: absolute;
+    padding: 70px;
+    font-size: 20px;
+    border: none;
+    background: #f5f6f6;
+    font-weight: normal;
+    color: #424242;
+    line-height: 25px;
+    vertical-align: middle;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  #banglapad:focus {
+    outline: none;
+  }
+  .btn{
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+    border: 1px;
+    color: #cacaca;
+    background: #555555;
+  }
+  .shareButton {
+    position: absolute;
+    right: 0px;
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+    border: 1px;
+    color: #fff;
+    background: #4080ff;
+  }
 
+  .bn {
+    position: absolute;
+    top: 0;
+    right: 46%;
+    margin-top: 10px;
+    color: #595959;
+    font-weight: bold;
+    font-size: 20px;
+  }
 
-      <!-- Le styles -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
- <!--    <link href="assets/css/widearea.css" rel="stylesheet"> -->
-    <link href="assets/css/custom.css" rel="stylesheet">
-
-
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-
-
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-
-
-
-
-  <script type="text/javascript" src="assets/js/jquery.js"></script>
-
+  </style>
 </head>
 <body>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '411649629179728',
+        xfbml      : true,
+        version    : 'v2.8'
+      });
+      FB.AppEvents.logPageView();
+    };
 
-    <!-- Navbar
-    ================================================== -->
-<!--     <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="index.html">Project</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active">
-                <a href="#">Home</a>
-              </li>
-              
-
-
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- end of nav bar -->
-
-
-    <div class="container">
-      <div class="row-fluid tpad">
-
-                  <div class="page-header">
-                    <h4>বাংলা লেখার জন্য  </h4>
-
-                  </div>
-
-
-      <div id="holder">
-        <textarea name="" id="ttxt" data-widearea="enable"></textarea>
-
-      </div>
-
-
-
-      <br>
-
-
-                  
-
-
-                  
-          
-      </div>
-      
-
-    </div>
-
-
-
-
-
-   
-    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.ime.js"></script> 
-    <script src="assets/js/jquery.ime.selector.js"></script> 
-    <script src="assets/js/jquery.ime.preferences.js"></script> 
-     <script src="assets/js/jquery.ime.inputmethods.js"></script>  
-    <script src="assets/js/bn-avro.js"></script>
-    <!-- <script type="text/javascript" src="assets/js/widearea.js"></script> -->
-
-
-
-
-
-
-    <script type="text/javascript" src="assets/js/app.js"></script>
-
-  
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <button class="btn" data-clipboard-target="#banglapad">Copy to clipboard</button>
+  <div class="bn">বাংলা লেখার জন্য</div>
+  <button type="button" class="shareButton">Post to facebook</button>
+  <textarea id="banglapad"></textarea>
+  <script
+    src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+    crossorigin="anonymous"></script>
+  <script src="assets/js/jquery.ime.js"></script>
+  <script src="assets/js/jquery.ime.selector.js"></script>
+  <script src="assets/js/jquery.ime.preferences.js"></script>
+  <script src="assets/js/bn-avro.js"></script>
+  <script src="assets/js/clipboard.min.js"></script>
+  <script type="text/javascript" src="assets/js/app.js"></script>
 </body>
 </html>
