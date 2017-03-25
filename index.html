@@ -13,6 +13,7 @@
     margin: 0;
     width: 100%;
     height: 100%;
+    background: #2d2d2d;
   }
   #banglapad {
     margin-top: 50px;
@@ -22,12 +23,11 @@
     padding: 70px;
     font-size: 20px;
     border: none;
-    background: #f5f6f6;
+    background: #2d2d2d;
     font-weight: normal;
-    color: #424242;
+    color: #b2b2b2;
     line-height: 25px;
     vertical-align: middle;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   #banglapad:focus {
     outline: none;
@@ -57,7 +57,7 @@
     top: 0;
     right: 46%;
     margin-top: 10px;
-    color: #595959;
+    color: #ddd;
     font-weight: bold;
     font-size: 20px;
   }
@@ -84,9 +84,10 @@
      }(document, 'script', 'facebook-jssdk'));
   </script>
   <button class="btn" data-clipboard-target="#banglapad">Copy to Clipboard</button>
-  <div class="bn">বাংলা লেখার জন্য [অভ্র কী-বোর্ড] কী-বোর্ড সুইচ: [ctrl + m]</div>
+  <div class="bn">বাংলা লেখার জন্য [অভ্র কী-বোর্ড]</div>
   <button type="button" class="shareButton">Post to facebook</button>
   <textarea id="banglapad"></textarea>
+  <code style="position:absolute; bottom:0; color:#ccc;"> কী-বোর্ড সুইচ: [ctrl + m] </code>
   <script
     src="https://code.jquery.com/jquery-1.12.4.min.js"
     integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
