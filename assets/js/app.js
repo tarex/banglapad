@@ -11,8 +11,13 @@
   new Clipboard('.btn');
 
   $('.shareButton').click(function() {
-    FB.login(function(){
-      FB.api('/me/feed', 'post', {message: $('#banglapad').val()});
-    }, {scope: 'publish_actions'});
+    const message = $('#banglapad').val();
+    if (message.length) {
+      FB.login(function(){
+  			FB.api('/me/feed', 'post', { message });
+      }, {scope: 'publish_actions'});
+    } else {
+      alert('কিছু নাই, শেয়ার হবে না');
+    }
   });
 })(jQuery);
